@@ -75,7 +75,7 @@ describe("resume download", () => {
     assert.ok(resumeLinks.length >= 3, "Expected header, hero, and contact resume downloads");
     for (const [, href, filename] of resumeLinks) {
       assert.equal(href, "My_resume.pdf");
-      assert.equal(filename, "Chathurya_Burraveni_Resume.pdf");
+      assert.equal(filename, "Chathurya_B_Resume.pdf");
     }
   });
 
@@ -95,8 +95,8 @@ describe("hero, identity, and contact", () => {
   const html = read("index.html");
 
   it("uses the Software Developer positioning and requested headline", () => {
-    assert.match(html, /<title>Chathurya Burraveni \| Software Developer<\/title>/);
-    assert.match(html, /<h1>Chathurya Burraveni<\/h1>/);
+    assert.match(html, /<title>Chathurya B \| Software Developer<\/title>/);
+    assert.match(html, /<h1>Chathurya B<\/h1>/);
     assert.match(html, />Software Developer</);
     assert.match(
       html,
@@ -109,7 +109,7 @@ describe("hero, identity, and contact", () => {
     const hero = section(html, "home");
     assert.match(hero, /href="#projects">View My Work</);
     assert.match(hero, /Download Resume/);
-    assert.match(hero, /href="https:\/\/www\.linkedin\.com\/in\/chathurya-burraveni-a903b9179\/"[^>]*>LinkedIn</);
+    assert.match(hero, /href="https:\/\/www\.linkedin\.com\/in\/chathurya-b\/"[^>]*>LinkedIn</);
     assert.match(hero, /href="https:\/\/github\.com\/Chathurya012-ai"[^>]*>GitHub</);
     assert.match(hero, /href="#contact">Contact Me</);
   });
@@ -124,7 +124,7 @@ describe("hero, identity, and contact", () => {
     assert.match(contact, /href="mailto:bchathurya78@gmail.com"/);
     assert.match(contact, /href="tel:\+18508160994"/);
     assert.match(contact, /\(850\) 816-0994/);
-    assert.match(contact, /href="https:\/\/www\.linkedin\.com\/in\/chathurya-burraveni-a903b9179\/"/);
+    assert.match(contact, /href="https:\/\/www\.linkedin\.com\/in\/chathurya-b\/"/);
     assert.match(contact, /href="https:\/\/github\.com\/Chathurya012-ai"/);
     assert.match(contact, /href="https:\/\/chathurya012-ai\.github\.io\/Chathurya-Burraveni-Portfolio\/"/);
   });
@@ -257,7 +257,7 @@ describe("accessibility, SEO, and GitHub Pages paths", () => {
     assert.match(html, /<a class="skip-link" href="#main">Skip to main content<\/a>/);
     assert.match(html, /<main id="main">/);
     assert.match(html, /aria-label="Primary"/);
-    assert.match(html, /<h1>Chathurya Burraveni<\/h1>/);
+    assert.match(html, /<h1>Chathurya B<\/h1>/);
     assert.ok((html.match(/<h1>/g) || []).length === 1);
     assert.match(css, /prefers-reduced-motion/);
     assert.match(css, /:focus-visible/);
@@ -296,7 +296,7 @@ describe("local preview server", () => {
   it("serves the homepage and static assets", async () => {
     assert.equal(home.status, 200);
     const page = home.body.toString("utf8");
-    assert.match(page, /Chathurya Burraveni/);
+    assert.match(page, /Chathurya B/);
 
     for (const asset of ["/style.css", "/script.js", "/profile.jpeg", "/My_resume.pdf"]) {
       const response = await get(`${BASE}${asset}`);
@@ -318,7 +318,7 @@ describe("external links", () => {
     const urls = [
       "https://github.com/Chathurya012-ai",
       "https://github.com/Chathurya012-ai/TalkMate",
-      "https://www.linkedin.com/in/chathurya-burraveni-a903b9179/",
+      "https://www.linkedin.com/in/chathurya-b/",
       "https://chathurya012-ai.github.io/Chathurya-Burraveni-Portfolio/",
     ];
 

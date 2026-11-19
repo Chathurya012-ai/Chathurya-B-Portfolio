@@ -1,4 +1,4 @@
-# Chathurya Burraveni — Portfolio
+# Chathurya B — Portfolio
 
 Professional Software Developer portfolio deployed with GitHub Pages.
 
