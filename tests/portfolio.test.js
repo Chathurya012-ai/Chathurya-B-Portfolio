@@ -126,7 +126,7 @@ describe("hero, identity, and contact", () => {
     assert.match(contact, /\(850\) 816-0994/);
     assert.match(contact, /href="https:\/\/www\.linkedin\.com\/in\/chathurya-b\/"/);
     assert.match(contact, /href="https:\/\/github\.com\/Chathurya012-ai"/);
-    assert.match(contact, /href="https:\/\/chathurya012-ai\.github\.io\/Chathurya-Burraveni-Portfolio\/"/);
+    assert.match(contact, /href="https:\/\/chathurya012-ai\.github\.io\/Chathurya-B-Portfolio\/"/);
   });
 });
 
@@ -266,7 +266,7 @@ describe("accessibility, SEO, and GitHub Pages paths", () => {
   it("includes SEO and Open Graph metadata", () => {
     assert.match(html, /<meta name="description"/);
     assert.match(html, /<meta property="og:title"/);
-    assert.match(html, /<meta property="og:url" content="https:\/\/chathurya012-ai\.github\.io\/Chathurya-Burraveni-Portfolio\/"/);
+    assert.match(html, /<meta property="og:url" content="https:\/\/chathurya012-ai\.github\.io\/Chathurya-B-Portfolio\/"/);
   });
 
   it("uses relative asset paths compatible with GitHub Pages project URLs", () => {
@@ -319,7 +319,7 @@ describe("external links", () => {
       "https://github.com/Chathurya012-ai",
       "https://github.com/Chathurya012-ai/TalkMate",
       "https://www.linkedin.com/in/chathurya-b/",
-      "https://chathurya012-ai.github.io/Chathurya-Burraveni-Portfolio/",
+      "https://chathurya012-ai.github.io/Chathurya-B-Portfolio/",
     ];
 
     for (const url of urls) {

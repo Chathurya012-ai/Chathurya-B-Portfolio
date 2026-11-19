@@ -2,7 +2,7 @@
 
 Professional Software Developer portfolio deployed with GitHub Pages.
 
-**Live site:** https://chathurya012-ai.github.io/Chathurya-Burraveni-Portfolio/
+**Live site:** https://chathurya012-ai.github.io/Chathurya-B-Portfolio/
 
 ## Stack
 
@@ -41,6 +41,6 @@ Do not push until the local preview looks correct.
 1. Commit the updated `index.html`, `style.css`, `script.js`, `My_resume.pdf`, and related files.
 2. Push to `main`.
 3. In the GitHub repository, confirm **Settings → Pages** is set to deploy from `main` / root (`/`).
-4. The site URL stays `https://chathurya012-ai.github.io/Chathurya-Burraveni-Portfolio/`.
+4. The site URL stays `https://chathurya012-ai.github.io/Chathurya-B-Portfolio/`.
 
 Relative asset paths (`style.css`, `script.js`, `profile.jpeg`, `My_resume.pdf`) are used so the project-pages base path continues to work.
